@@ -13,21 +13,26 @@
 </head>
 
 <body>
+    <header class="bg-primary text-white p-3 mb-3 d-flex justify-content-center align-items-center">
+        <h1 class="text-center">Wypożyczalnia sprzętu wodnego</h1>
+        <img src="~/Images/rower-wodny.jpg" alt="rowerek wodny" class="img-fluid ms-auto" 
+        style="width: 100px; height: 100px;border-radius: 10px;">
+    </header>
     <menu >
         <ul class="nav justify-content-center" >
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Home/About">About</a>
+                <a class="nav-link" href="/Home/Rental">Wypożycz</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Home/Contact">Contact</a>
+                <a class="nav-link" href="/Home/List">Lista sprzętu</a>
             </li>
         </ul>
     </menu>
     <div class="container">
-        <h1 class="text-center">Wypożyczalnia sprzętu wodnego</h1>
+        
         @RenderBody()
     </div>
     

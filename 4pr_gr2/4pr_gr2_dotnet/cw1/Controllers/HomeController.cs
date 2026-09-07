@@ -9,6 +9,14 @@ namespace cw1.controllers
         {
             return View();
         }
+        public ActionResult List()
+        {
+            return View();
+        }
+        public ActionResult Rental()
+        {
+            return View();
+        }   
 
     }
 }
