@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4pr_gr1", "4pr_gr1", "{CA8A93BF-3AE5-66BF-AE63-9947D9651578}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4pr_gr1_dotnet", "4pr_gr1_dotnet", "{B8639245-1B75-B741-D4F0-5BA4D7083593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cw1", "4pr_gr1\4pr_gr1_dotnet\cw1\cw1.csproj", "{8186C639-58B6-4B7C-1873-334913015D94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8186C639-58B6-4B7C-1873-334913015D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8186C639-58B6-4B7C-1873-334913015D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8186C639-58B6-4B7C-1873-334913015D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8186C639-58B6-4B7C-1873-334913015D94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B8639245-1B75-B741-D4F0-5BA4D7083593} = {CA8A93BF-3AE5-66BF-AE63-9947D9651578}
+		{8186C639-58B6-4B7C-1873-334913015D94} = {B8639245-1B75-B741-D4F0-5BA4D7083593}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBBA7A00-3122-4534-BBD6-03DC6CFB37C1}
+	EndGlobalSection
+EndGlobal
