@@ -1,1 +1,16 @@
-﻿<h3>Wypożycz</h3>
+﻿@model RentalViewModel
+
+<h3>Formularz wypożyczenia</h3>
+<section>
+    Wypożyczasz: <strong>@Model.ActualItem?.Name</strong><br />
+    Opis: <strong>@Model.ActualItem?.Description</strong><br />
+    Cena za godzinę: <strong>@Model.ActualItem?.Price.ToString("C")</strong><br />
+</section>
+<section>
+    <form method="post" asp-action="Rental">
+        <input type="hidden" asp-for="ActualItem.Id"  />
+        <label for="Duration">Czas wypożyczenia (godziny):</label>
+        <input type="number" asp-for="MyRentalItem.Duration" id="Duration" required />
+        <button type="submit">Wypożycz</button>
+    </form>
+</section>

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<RentalItem>
+<h3>Lista sprzętu wypożyczonego</h3>
+<ul class="list-group">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+            <strong>@item.ActualItem?.Name</strong> - Wypożyczono na: @item.Duration -
+            godzin: za cenę: @item.ActualItem?.Price.ToString("C")
+        </li>
+    }
+</ul>
