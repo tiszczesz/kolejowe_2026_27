@@ -1,5 +1,6 @@
 ﻿//Ex1();
-Ex2(200);//100
+//Ex2(200);//100
+Ex3();
 void Ex1()
 {
     Console.WriteLine("podaj ilosc liczb: ");
@@ -14,11 +15,23 @@ void Ex2(uint range = 100)
     //while(){...}
     int sum = 0;
     Random rnd = new Random(); //losowacz
-    while(sum < range)
+    while (sum < range)
     {
         int randomNumber = rnd.Next(20);
         sum += randomNumber;
         Console.Write(randomNumber + " ");
     }
     Console.WriteLine($"\nSuma: {sum}");
+}
+
+void Ex3()
+{
+    //do{...} while();
+    const int Guard = 0;
+    int randomNumber = 0;
+    do
+    {
+        randomNumber = new Random().Next(20);
+        Console.Write(randomNumber + " ");
+    } while (randomNumber != Guard);
 }
