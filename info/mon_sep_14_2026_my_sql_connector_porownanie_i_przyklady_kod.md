@@ -6,6 +6,7 @@
 ## @tiszczesz
 
 dotnet z mysql
+
 1. Jak jest różnica miedzy użyciem pakietu Mysql.Data oraz MySql.Connector
 
 ## Copilot
@@ -18,10 +19,12 @@ W praktyce chodzi o **MySQL Connector/NET** i zwykle spotkasz dwa nazewnictwa:
 Jeśli przez **`MySql.Connector`** masz na myśli **`MySqlConnector`**, to różnice są takie:
 
 ### 1) Autor i licencja
+
 - **MySql.Data**: oficjalny pakiet Oracle/MySQL.
 - **MySqlConnector**: społecznościowy projekt open-source.
 
 ### 2) Wydajność i zachowanie
+
 - **MySqlConnector** jest często:
   - szybszy,
   - bardziej zgodny z async/await,
@@ -29,6 +32,7 @@ Jeśli przez **`MySql.Connector`** masz na myśli **`MySqlConnector`**, to róż
 - **MySql.Data** bywa bardziej “oficjalny”, ale w praktyce wiele osób wybiera `MySqlConnector` do nowych projektów.
 
 ### 3) API
+
 - Oba udostępniają podobne klasy typu:
   - `MySqlConnection`
   - `MySqlCommand`
@@ -36,10 +40,12 @@ Jeśli przez **`MySql.Connector`** masz na myśli **`MySqlConnector`**, to róż
 - Kod aplikacji wygląda często bardzo podobnie, ale mogą istnieć różnice w szczegółach zachowania.
 
 ### 4) Wsparcie dla async
+
 - **MySqlConnector** zwykle ma lepsze wsparcie dla operacji asynchronicznych.
 - W `MySql.Data` async historycznie miało więcej ograniczeń / mniej przewidywalne zachowanie.
 
 ### 5) Kompatybilność z ORM
+
 - Z **Entity Framework Core** zwykle używa się providerów takich jak:
   - `Pomelo.EntityFrameworkCore.MySql` + `MySqlConnector`
   - albo oficjalnych providerów MySQL
@@ -48,26 +54,32 @@ Jeśli przez **`MySql.Connector`** masz na myśli **`MySqlConnector`**, to róż
 ---
 
 ## Co wybrać?
+
 ### Wybierz **MySqlConnector**, jeśli:
+
 - zaczynasz nowy projekt,
 - zależy Ci na async i wydajności,
 - chcesz popularne rozwiązanie open-source.
 
 ### Wybierz **MySql.Data**, jeśli:
+
 - masz istniejący projekt oparty o oficjalny pakiet,
 - potrzebujesz zgodności z już istniejącym kodem lub dokumentacją Oracle.
 
 ---
 
 ## Mała uwaga o nazwach
+
 Jeśli w NuGet widzisz:
+
 - **`MySql.Data`** → oficjalny pakiet
 - **`MySqlConnector`** → niezależny pakiet
 
 `MySql.Connector` jako dokładna nazwa paczki jest mniej typowa — możliwe, że chodziło Ci właśnie o `MySqlConnector`.
 
 Jeśli chcesz, mogę Ci też pokazać:
-1. **krótkie porównanie w tabeli**, albo  
+
+1. **krótkie porównanie w tabeli**, albo
 2. **przykład kodu C# dla obu paczek**.
 
 ## @tiszczesz
@@ -81,15 +93,15 @@ Jasne — poniżej masz **krótką tabelę porównawczą** i **przykład kodu C#
 
 ## Porównanie
 
-| Cecha | `MySql.Data` | `MySqlConnector` |
-|---|---|---|
-| Autor | Oracle / MySQL | Projekt open-source |
-| Status | Oficjalny sterownik | Alternatywny, bardzo popularny |
-| Async/await | OK, ale bywa mniej przewidywalny | Zwykle lepsza implementacja async |
-| Wydajność | Dobra | Często lepsza |
-| Licencja | Komercyjna / Oracle | Open-source |
-| EF Core | Używany rzadziej niż Pomelo + MySqlConnector | Bardzo często używany z Pomelo |
-| Kompatybilność | Szeroka | Bardzo szeroka, często wybierana do nowych projektów |
+| Cecha          | `MySql.Data`                                 | `MySqlConnector`                                     |
+| -------------- | -------------------------------------------- | ---------------------------------------------------- |
+| Autor          | Oracle / MySQL                               | Projekt open-source                                  |
+| Status         | Oficjalny sterownik                          | Alternatywny, bardzo popularny                       |
+| Async/await    | OK, ale bywa mniej przewidywalny             | Zwykle lepsza implementacja async                    |
+| Wydajność      | Dobra                                        | Często lepsza                                        |
+| Licencja       | Komercyjna / Oracle                          | Open-source                                          |
+| EF Core        | Używany rzadziej niż Pomelo + MySqlConnector | Bardzo często używany z Pomelo                       |
+| Kompatybilność | Szeroka                                      | Bardzo szeroka, często wybierana do nowych projektów |
 
 ## Przykład C# — `MySql.Data`
 
@@ -136,6 +148,7 @@ while (await reader.ReadAsync())
 ```
 
 ## Wniosek
+
 Jeśli startujesz nowy projekt, **najczęściej poleciłbym `MySqlConnector`**.  
 Jeśli chcesz, mogę też dopisać:
 
@@ -165,11 +178,6 @@ Jeśli chcesz, mogę od razu przygotować gotową treść pliku tutaj do skopiow
 
 gotową treść pliku tutaj do skopiowania
 
-## Copilot
-
-Jasne — poniżej masz gotową treść pliku **`tut_mysqconnector.md`** do skopiowania:
-
-````markdown
 # MySQL w .NET — `MySql.Data` vs `MySqlConnector`
 
 Poniżej znajdziesz krótkie porównanie obu bibliotek oraz przykłady użycia w C#.
@@ -183,24 +191,26 @@ Jeśli przez **`MySql.Connector`** masz na myśli **`MySqlConnector`**, to róż
 
 ## Krótkie porównanie
 
-| Cecha | `MySql.Data` | `MySqlConnector` |
-|---|---|---|
-| Autor | Oracle / MySQL | Projekt open-source |
-| Status | Oficjalny sterownik | Alternatywny, bardzo popularny |
-| Async/await | OK, ale bywa mniej przewidywalny | Zwykle lepsza implementacja async |
-| Wydajność | Dobra | Często lepsza |
-| Licencja | Komercyjna / Oracle | Open-source |
-| EF Core | Używany rzadziej niż Pomelo + MySqlConnector | Bardzo często używany z Pomelo |
-| Kompatybilność | Szeroka | Bardzo szeroka, często wybierana do nowych projektów |
+| Cecha          | `MySql.Data`                                 | `MySqlConnector`                                     |
+| -------------- | -------------------------------------------- | ---------------------------------------------------- |
+| Autor          | Oracle / MySQL                               | Projekt open-source                                  |
+| Status         | Oficjalny sterownik                          | Alternatywny, bardzo popularny                       |
+| Async/await    | OK, ale bywa mniej przewidywalny             | Zwykle lepsza implementacja async                    |
+| Wydajność      | Dobra                                        | Często lepsza                                        |
+| Licencja       | Komercyjna / Oracle                          | Open-source                                          |
+| EF Core        | Używany rzadziej niż Pomelo + MySqlConnector | Bardzo często używany z Pomelo                       |
+| Kompatybilność | Szeroka                                      | Bardzo szeroka, często wybierana do nowych projektów |
 
 ## Kiedy wybrać które?
 
 ### Wybierz `MySqlConnector`, jeśli:
+
 - zaczynasz nowy projekt,
 - zależy Ci na async i wydajności,
 - chcesz popularne rozwiązanie open-source.
 
 ### Wybierz `MySql.Data`, jeśli:
+
 - masz istniejący projekt oparty o oficjalny pakiet,
 - potrzebujesz zgodności z już istniejącym kodem lub dokumentacją Oracle.
 
@@ -307,9 +317,3 @@ dotnet add package Pomelo.EntityFrameworkCore.MySql
 
 Jeśli startujesz nowy projekt, **najczęściej polecany jest `MySqlConnector`**.  
 Jeśli chcesz maksymalnej zgodności z oficjalnym ekosystemem Oracle/MySQL, możesz wybrać **`MySql.Data`**.
-````
-
-Jeśli chcesz, mogę też przygotować:
-- wersję **krótszą i bardziej “notatkową”**,
-- wersję **bardziej techniczną**,
-- albo **z dodatkiem o MariaDB**.
