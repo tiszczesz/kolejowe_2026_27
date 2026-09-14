@@ -1,6 +1,9 @@
 ﻿//FirstElem();
-SecondElem();
-
+//SecondElem();
+//ćwiczenie:
+// Napisz funkcję, która prosi o imię i nazwisko oraz wiek
+// I rejestruje na egzamin prawa jazdy jeżeli wiek jest większy lub równy 17 lat, 
+// w przeciwnym wypadku informuje, że kandydat jest niepełnoletni
 void FirstElem()
 {
     //tworzenie nowej zmiennej
