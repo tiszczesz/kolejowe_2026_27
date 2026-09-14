@@ -1,4 +1,4 @@
-﻿FirstElem();
+﻿//FirstElem();
 SecondElem();
 
 void FirstElem()
@@ -14,16 +14,24 @@ void FirstElem()
 
 void SecondElem()
 {
-    Console.Write("Podaj imie: ");
-    string? firstName = Console.ReadLine();// wczytanie danych z konsoli
-    Console.Write("Podaj wiek: ");
-    int age = Convert.ToInt32(Console.ReadLine());
-    if (age < 18) //instrukcja warunkowa
+    try
     {
-        Console.WriteLine($"Witaj {firstName} wiek: {age}, jesteś niepełnoletni");
+        Console.Write("Podaj imie: ");
+        string? firstName = Console.ReadLine();// wczytanie danych z konsoli
+        Console.Write("Podaj wiek: ");
+        int age = Convert.ToInt32(Console.ReadLine());
+        if (age < 18) //instrukcja warunkowa
+        {
+            Console.WriteLine($"Witaj {firstName} wiek: {age}, jesteś niepełnoletni");
+        }
+        else
+        {
+            Console.WriteLine($"Witaj {firstName} wiek: {age}, jesteś pełnoletni");
+        }
     }
-    else
+    catch (Exception)
     {
-        Console.WriteLine($"Witaj {firstName} wiek: {age}, jesteś pełnoletni");
+        Console.WriteLine("Wiek musi być liczbą całkowitą");
     }
 }
+    
