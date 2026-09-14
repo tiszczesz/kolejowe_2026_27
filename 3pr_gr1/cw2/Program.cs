@@ -27,6 +27,10 @@ void Ex2(uint range = 100)
 void Ex3()
 {
     //do{...} while();
+    //zliczanie ile liczb bez zera
+    //suma tych liczb
+    //srednia tych liczb     (min max)
+    //uwzglednic ze zero moze byc od razu
     const int Guard = 0;
     int randomNumber = 0;
     do
