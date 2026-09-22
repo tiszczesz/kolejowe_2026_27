@@ -5,7 +5,7 @@ namespace cw2_ef.Controllers
     public class LibraryController : Controller
     {
         // GET: LibraryController
-        public ActionResult Index()
+        public ActionResult List()
         {
             return View();
         }
