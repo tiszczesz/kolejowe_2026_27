@@ -20,3 +20,5 @@ Console.WriteLine(server2.ShowInfo());
 Console.WriteLine(server2.IsActive);
 server2.Name = "Nazwa serwera";
 Console.WriteLine(server2.ShowInfo());
+server2.Name = "";
+Console.WriteLine(server2.ShowInfo());
