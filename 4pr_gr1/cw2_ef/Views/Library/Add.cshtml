@@ -1,0 +1,22 @@
+﻿@model Book
+
+<h3>Dodawanie książki</h3>
+<form asp-action="Add" method="post">
+    <div class="mb-3">
+        <label for="Title" class="form-label">Tytuł</label>
+        <input type="text" class="form-control" id="Title" name="Title" required>
+    </div>
+    <div class="mb-3">
+        <label for="Author" class="form-label">Autor</label>
+        <input type="text" class="form-control" id="Author" name="Author" required>
+    </div>
+    <div class="mb-3">
+        <label for="Year" class="form-label">Rok wydania</label>
+        <input type="number" class="form-control" id="Year" name="Year" required>
+    </div>
+    <div class="mb-3">
+        <label for="Price" class="form-label">Cena</label>
+        <input type="number" class="form-control" id="Price" name="Price" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Dodaj książkę</button>
+</form>

@@ -18,6 +18,22 @@ namespace cw2_ef.Controllers
             var books = _context.Books.ToList();
             return View(books);
         }
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Add(Book book)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(book);
+            }
+            _context.Books.Add(book);
+            _context.SaveChanges();
+            return RedirectToAction("List");
+        }
 
     }
 }
