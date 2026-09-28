@@ -22,4 +22,41 @@ Console.WriteLine(n1.ShowNote());
 Console.WriteLine(n2.ShowNote());
 n1.Name = null;
 Console.WriteLine(n1.Name);
+Console.WriteLine(" ========================================================================= ");
+var prods = GetProducts();
+ShowProducts(prods);
 
+Product[] GetProducts()
+{
+    //definicja tablicy 5 elementowej typu Product
+    Product[] products = new Product[5];
+    products[0] = new Product( "Myszka", 50.5M, "Myszka optyczna", DateTime.Now.AddDays(30));
+    products[1] = new Product( "Klawiatura", 100.5M, "Klawiatura mechaniczna", DateTime.Now.AddDays(60));
+    products[2] = new Product( "Monitor", 500.5M, "Monitor 4K", DateTime.Now.AddDays(90));
+    products[3] = new Product( null, 2000.5M, "Laptop gamingowy", DateTime.Now.AddDays(120));
+    products[4] = new Product( "Smartfon", 1500.5M, "Smartfon z dużym ekranem", DateTime.Now.AddDays(150));
+    return products;
+}
+void ShowProducts(Product[] products)
+{
+    foreach(var p in products)
+    {
+        Console.WriteLine(p);
+    }
+}
+void GetLinesFromFile(string filename)
+{
+    string[] result = File.ReadAllLines(filename);
+    foreach(string line in result)
+    {
+        Console.WriteLine(line);
+    }
+}
+int[]? GetRandomNumbers(int size)
+{
+    Random rnd = new Random(); //Next
+    return null;
+}
+Console.WriteLine(" ========================================================================= ");
+GetLinesFromFile("data.txt");
+var result = GetRandomNumbers(200);

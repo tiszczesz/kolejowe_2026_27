@@ -26,7 +26,7 @@ public class Product
         }
         set
         {
-            price = value > 0 ? price : -value;
+            price = value > 0 ? value : -value;
         }
     }
     private DateTime expirationDate;
@@ -57,7 +57,7 @@ public class Product
     }
     public override string ToString()
     {
-        return $"{Name} {price} zł";
+        return $"{Name} {price} zł data: {ExpirationDate.ToShortDateString()}";
     }
 
 }
