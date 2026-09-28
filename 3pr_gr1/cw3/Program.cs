@@ -24,7 +24,7 @@ n1.Name = null;
 Console.WriteLine(n1.Name);
 Console.WriteLine(" ========================================================================= ");
 var prods = GetProducts();
-ShowProducts(prods);
+ShowTab<Product>(prods);
 
 Product[] GetProducts()
 {
@@ -37,7 +37,7 @@ Product[] GetProducts()
     products[4] = new Product( "Smartfon", 1500.5M, "Smartfon z dużym ekranem", DateTime.Now.AddDays(150));
     return products;
 }
-void ShowProducts(Product[] products)
+void ShowTab<T>(T[] products)
 {
     foreach(var p in products)
     {
@@ -60,3 +60,4 @@ int[]? GetRandomNumbers(int size)
 Console.WriteLine(" ========================================================================= ");
 GetLinesFromFile("data.txt");
 var result = GetRandomNumbers(200);
+ShowTab<int>(result);
