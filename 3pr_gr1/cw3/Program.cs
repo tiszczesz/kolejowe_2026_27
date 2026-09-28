@@ -52,10 +52,15 @@ void GetLinesFromFile(string filename)
         Console.WriteLine(line);
     }
 }
-int[]? GetRandomNumbers(int size)
+int[] GetRandomNumbers(int size)
 {
     Random rnd = new Random(); //Next
-    return null;
+    int[] numbers = new int[size];
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = rnd.Next(0,200);
+    }
+    return numbers;
 }
 Console.WriteLine(" ========================================================================= ");
 GetLinesFromFile("data.txt");
