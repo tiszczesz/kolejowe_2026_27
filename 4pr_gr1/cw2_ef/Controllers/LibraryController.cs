@@ -44,6 +44,7 @@ namespace cw2_ef.Controllers
             }
 
             _context.Books.Remove(book);
+           // _context.Update(book);
             _context.SaveChanges();
 
             return RedirectToAction("List");
