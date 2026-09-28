@@ -20,6 +20,6 @@ var n2 = new Note(DateOnly.FromDateTime(DateTime.Now),
              "notatka 2", "tresc notatki 2");
 Console.WriteLine(n1.ShowNote());
 Console.WriteLine(n2.ShowNote());
-n1.Name = "Zmieniona wartosc";
+n1.Name = null;
 Console.WriteLine(n1.Name);
 
