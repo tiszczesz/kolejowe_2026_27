@@ -7,6 +7,7 @@
         <th>Autor</th>
         <th>Rok wydania</th>
         <th>Cena</th>
+        <th> --- </th>
     </tr>
 </thead>
 <tbody>
@@ -17,6 +18,10 @@
             <td>@book.Author</td>
             <td>@book.Year</td>
             <td>@book.Price</td>
+            <td>
+                <a href="@Url.Action("Edit", "Library", new { id = book.Id })" class="btn btn-sm btn-outline-primary">Edytuj</a>
+                <a href="@Url.Action("Delete", "Library", new { id = book.Id })" class="btn btn-sm btn-outline-danger">Usuń</a>
+            </td>
         </tr>
     }
 </tbody>

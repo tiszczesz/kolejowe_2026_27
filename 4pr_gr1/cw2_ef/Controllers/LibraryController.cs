@@ -31,7 +31,21 @@ namespace cw2_ef.Controllers
                 return View(book);
             }
             _context.Books.Add(book);
+            //_context.Remove(book);
             _context.SaveChanges();
+            return RedirectToAction("List");
+        }
+        public IActionResult Delete(int id)
+        {
+            var book = _context.Books.Find(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            _context.Books.Remove(book);
+            _context.SaveChanges();
+
             return RedirectToAction("List");
         }
 
