@@ -10,6 +10,7 @@ builder.Services.AddDbContext<BooksDbContext>(options =>
     options.UseSqlite(connString)
 );
 var app = builder.Build();
+//app.MapGet("/api/books", (BooksDbContext db) => db.Books.ToList());
 app.UseStaticFiles();
 
 app.MapControllerRoute(
