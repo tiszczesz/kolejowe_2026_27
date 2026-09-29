@@ -13,7 +13,7 @@ namespace cw2_ef.Controllers
         // GET: LibraryController
         public ActionResult List()
         {
-            var movies = _context.Movies.ToList();
+            var movies = _context.Movies.OrderBy(m => m.Title).ToList();
             return View(movies);
         }
         [HttpGet]
