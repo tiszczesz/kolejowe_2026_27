@@ -17,7 +17,11 @@
                 <td>@movie.Title</td>
                 <td>@movie.Director</td>
                 <td>@movie.ReleaseDate</td>
-                <td></td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@movie.Id">Usuń</a>
+                    &nbsp;|&nbsp;
+                    <a asp-action="Edit" asp-route-id="@movie.Id">Edytuj</a>
+                </td>
             </tr>
         }
     </tbody>

@@ -1,0 +1,17 @@
+﻿@model Movie
+<h3>Dodaj film</h3>
+<form asp-action="Add" method="post">
+    <div class="mb-3">
+        <label for="Title" class="form-label">Tytuł</label>
+        <input type="text" class="form-control" id="Title" asp-for="Title" required />
+    </div>
+    <div class="mb-3">
+        <label for="Director" class="form-label">Reżyser</label>
+        <input type="text" class="form-control" id="Director" asp-for="Director" required />
+    </div>
+    <div class="mb-3">
+        <label for="ReleaseDate" class="form-label">Data wydania</label>
+        <input type="date" class="form-control" id="ReleaseDate" asp-for="ReleaseDate" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Dodaj film</button>
+</form>

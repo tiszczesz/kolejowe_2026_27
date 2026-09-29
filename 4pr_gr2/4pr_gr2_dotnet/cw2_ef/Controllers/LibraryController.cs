@@ -28,13 +28,45 @@ namespace cw2_ef.Controllers
             if (ModelState.IsValid)
             {
                 _context.Movies.Add(movie);
-                // _context.Movies.Remove(movie);
-                // _context.Movies.Update(movie);
+                
                 _context.SaveChanges();
                 return RedirectToAction("List");
             }
             return View(movie);
         }
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var movie = _context.Movies.Find(id);
+            if (movie == null)
+            {
+                return NotFound();
+            }
+            _context.Movies.Remove(movie);
+            _context.SaveChanges();
+            return RedirectToAction("List");
+        }
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var movie = _context.Movies.Find(id);
+            if (movie == null)
+            {
+                return NotFound();
+            }
+            return View(movie);
+        }
+        [HttpPost]
+        public IActionResult Edit(Movie movie, int id)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Movies.Update(movie);
+                _context.SaveChanges();
+                return RedirectToAction("List");
+            }
+            return View(movie);
+        }   
 
 
     }
