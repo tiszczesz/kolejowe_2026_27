@@ -24,9 +24,28 @@ void ShowTab(int[,] tab2D)
     {
         for (int j = 0; j < tab2D.GetLength(1); j++)
         {
-            Console.Write(tab2D[i,j]+"\t");
+            Console.Write(tab2D[i, j] + "\t");
         }
         Console.WriteLine();
     }
 }
 
+void Ex2()
+{
+    //tablice tablic
+    string[][] tab = new string[4][];
+    tab[0] = new string[] { "ala", "ola", "bola", "tola" };
+    tab[1] = new string[] { "ggg", "yyyy", "wewe", "gggg", "ffff" };
+    tab[2] = new string[] { "---" };
+    tab[3] = new string[] { "ggg", "yyyy" };
+    foreach (var elem in tab)
+    {
+        Console.WriteLine(String.Join('-',elem));
+        // foreach (var word in elem)
+        // {
+        //     Console.Write(word + "$");
+        // }
+        // Console.WriteLine();
+    }
+}
+Ex2();
