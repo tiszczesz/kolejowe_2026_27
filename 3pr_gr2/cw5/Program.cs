@@ -27,3 +27,35 @@ void ShowTab(int[] tab)
     }
     Console.WriteLine();
 }
+int GetMin(int[] tab)
+{
+    int min = Int32.MaxValue;
+    //int min2 = tab[0];
+    foreach (int elem in tab)
+    {
+        if (elem < min) min = elem;
+    }
+    return min;
+    //return tab.Min();
+}
+int GetMax(int[] tab)
+{
+    int max = Int32.MinValue;
+    //int min2 = tab[0];
+    foreach (int elem in tab)
+    {
+        if (elem > max) max = elem;
+    }
+    return max;
+    //return tab.Max();    
+}
+int GetSum(int[] tab)
+{
+    int sum = 0;
+    foreach(var elem in tab)
+    {
+        sum += elem;
+    }
+    return sum;
+    //return tab.Sum();
+}
