@@ -99,3 +99,10 @@ void Ex3()
 Ex3();
 //napisac funkcje tworzaca tablice 2-wymiarowa
 // zawierajaca n n*n n*n*n
+void Zad1()
+{
+    Console.Write("Ile chcesz liczb: ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    Random rnd = new Random();
+    int[,] numbers = new int[size,3];
+}
