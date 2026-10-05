@@ -57,7 +57,7 @@ namespace cw2_ef.Controllers
             return View(movie);
         }
         [HttpPost]
-        public IActionResult Edit(Movie movie, int id)
+        public IActionResult Edit(Movie movie)
         {
             if (ModelState.IsValid)
             {
