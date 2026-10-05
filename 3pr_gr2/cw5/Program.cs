@@ -84,4 +84,18 @@ void Ex2()
         Console.WriteLine();
     }
 }
-Ex2();
+//Ex2();
+void Ex3()
+{
+    //tablice tablic
+    string[][] words = new string[2][];
+    words[0] = ["ala", "ggg", "gfffff"];
+    words[1] = ["ttt", "gggggg", "ala bela", "jjjjjj", "hghghgh"];
+    foreach (var elem in words)
+    {
+        Console.WriteLine(String.Join("-", elem));
+    }
+}
+Ex3();
+//napisac funkcje tworzaca tablice 2-wymiarowa
+// zawierajaca n n*n n*n*n
