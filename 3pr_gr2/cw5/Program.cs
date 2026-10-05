@@ -1,4 +1,6 @@
-﻿void Ex1()
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+void Ex1()
 {
     //tablice jednowymiarowe
     Console.Write("Podaj rozmiar tablicy: ");
@@ -6,11 +8,12 @@
     int[] numbers = new int[size];//deklaracja tablicy o rozmiarze 5
     FillTab(numbers);
     ShowTab(numbers);
-    GetMin(numbers);
-    GetMax(numbers);  //numbers.Min();
-    GetSum(numbers);  //numbers.Sum();
+    int min = GetMin(numbers);
+    int max = GetMax(numbers);  //numbers.Min();
+    int sum = GetSum(numbers);  //numbers.Sum();
+    Console.WriteLine($"min = {min}\tmax = {max}\tsum = {sum}");
 }
-Ex1();
+//Ex1();
 void FillTab(int[] numbers)
 {
     Random rnd = new Random();
@@ -52,10 +55,33 @@ int GetMax(int[] tab)
 int GetSum(int[] tab)
 {
     int sum = 0;
-    foreach(var elem in tab)
+    foreach (var elem in tab)
     {
         sum += elem;
     }
     return sum;
     //return tab.Sum();
 }
+void Ex2()
+{
+    //tablice wielo-wymiarowe
+    int[,] tab2D = new int[10, 20]; //int tab[][]
+    Random rnd = new Random();
+    for (int i = 0; i < tab2D.GetLength(0); i++)
+    {
+        for (int j = 0; j < tab2D.GetLength(1); j++)
+        {
+            tab2D[i, j] = rnd.Next(0, 200);
+        }
+    }
+    //wyswietlanie tablicy
+    for (int i = 0; i < tab2D.GetLength(0); i++)
+    {
+        for (int j = 0; j < tab2D.GetLength(1); j++)
+        {
+            Console.Write(tab2D[i, j] + "\t");
+        }
+        Console.WriteLine();
+    }
+}
+Ex2();
