@@ -89,7 +89,8 @@ void Ex3()
 {
     //tablice tablic
     string[][] words = new string[2][];
-    words[0] = ["ala", "ggg", "gfffff"];
+    words[0] = ["ala", "ggg", "gfffff",
+    "asdsadasdasdasdasd","retretertert"];
     words[1] = ["ttt", "gggggg", "ala bela", "jjjjjj", "hghghgh"];
     foreach (var elem in words)
     {
@@ -104,5 +105,5 @@ void Zad1()
     Console.Write("Ile chcesz liczb: ");
     int size = Convert.ToInt32(Console.ReadLine());
     Random rnd = new Random();
-    int[,] numbers = new int[size,3];
+    int[,] numbers = new int[size, 3];
 }
