@@ -49,3 +49,16 @@ void Ex2()
     }
 }
 Ex2();
+//zad1
+// uzytkownik podaje ile liczb chce
+//Napisz funkcję generujaca tablicę 2D: 
+// 1-kolumna losowa liczba (do 100) 2
+// 2-kwadrat tej liczby 4
+// 3-szescian liczby 8
+// 4-suma 3 pierwszych kolumn 14
+void zad1()
+{
+    Console.Write("Ile chcesz liczb: ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    int[,] numbers = new int[size,4];
+}
