@@ -1,0 +1,20 @@
+{
+  "name": "cw1",
+  "version": "1.0.0",
+  "description": "opis",
+  "keywords": [
+    "js",
+    "ts",
+    "node"
+  ],
+  "license": "ISC",
+  "author": "noname",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
