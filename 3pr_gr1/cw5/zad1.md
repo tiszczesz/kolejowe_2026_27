@@ -1,4 +1,4 @@
-Naspisz program z menu
+Napisz program z menu
 
 1. Wyswietl wszystkie ksiązki
 2. Dodaj ksiażkę
