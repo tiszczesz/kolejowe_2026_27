@@ -15,6 +15,7 @@ public class Person
         Lastname = "noname";
         Age = 20;
     }
+    //aby wygodnie zapisywać linię w pliku
     public override string ToString()
     {
         return $"{Id}|{Firstname}|{Lastname}|{Age}";

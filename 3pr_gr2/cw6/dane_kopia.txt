@@ -1,0 +1,6 @@
+1|Adam|Nowak|23
+2|Ewa|Kowalska|30
+3|Jan|Wiśniewski|45
+4|Anna|Zielińska|28
+5|Piotr|Kowalczyk|35
+6|Franek|Dzbanek|34

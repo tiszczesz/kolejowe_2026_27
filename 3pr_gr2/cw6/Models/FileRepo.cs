@@ -30,4 +30,26 @@ public class FileRepo
             if (p != null) Persons.Add(p);
         }
     }
+    public void SavePersons()
+    {
+        if (Persons != null)
+        {
+            List<string> lines = new List<string>();            
+            foreach (var p in Persons)
+            {
+                 lines.Add(p.ToString());  
+            }
+            File.WriteAllLines(fileName,lines);
+        }
+
+    }
+    public void DeletePerson(int id)
+    {
+        var personToDelete = Persons?.Find((p)=>p.Id==id);
+        if (personToDelete != null)
+        {
+            Persons?.Remove(personToDelete);
+        }
+        SavePersons();
+    }
 }
