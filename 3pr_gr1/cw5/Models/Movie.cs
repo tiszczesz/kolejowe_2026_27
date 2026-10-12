@@ -12,4 +12,18 @@ public class Movie
     {
         return $"{Id}|{Title}|{Director}|{Year}"; 
     }
+    public static Movie? GetFromLine(string line)
+    {
+        var data = line.Split('|'); 
+        if(data.Length == 4)
+        {
+            return new Movie{
+                Id = Convert.ToInt32(data[0]),
+                Title = data[1].Trim(),
+                Director = data[2].Trim(),
+                Year = Convert.ToInt32(data[3])
+            };
+        }
+        return null;
+    }
 }
