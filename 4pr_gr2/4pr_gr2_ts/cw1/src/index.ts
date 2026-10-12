@@ -1,10 +1,3 @@
-let a = 12;
-let b = 23;
-const colors:string[] = [
-    "sdsfsdfsdf",
-    "dfgdfgdfgdf",
-    "23",
-    "true"
-]
+import { colors } from "./data";
 //alert("dddsdsds");
 console.log(colors);
