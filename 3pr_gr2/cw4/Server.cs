@@ -7,14 +7,17 @@ public class Server
     // konstruktor bezargumentowy - domyślny
     public Server()
     {
-        isActive = true;
-        name = "Server";
+        IsActive = true;
+        Name = "Server";
     }
     //konstruktor z argumentami
     public Server(bool isActive, string name)
     {
-        this.isActive = isActive;
-        this.name = name;
+        // this.isActive = isActive;
+        // this.name = name;
+        //uzycie property zamiast pól prywatnych
+        IsActive = isActive;
+        Name = name;
     }
     public string ShowInfo()
     {
@@ -22,10 +25,10 @@ public class Server
         // if(isActive) result += " serwer działa";
         // else result += " serwer wylaczony";
         // return result; 
-        return $"Nazwa serwera: {name}\t" +
-        (isActive ? "serwer działa" : " serwer wylaczony");
+        return $"Nazwa serwera: {Name}\t" +
+                (IsActive ? "serwer działa" : " serwer wylaczony");
     }
-    private bool isActive;
+    //private bool isActive;
     private string name;
     // public bool GetIsActive()
     // {
@@ -36,28 +39,30 @@ public class Server
     //     return name;
     // }
     //użycie property zamiast metod GetIsActive() i GetName()
-    public bool IsActive
-    {
-        get
-        {
-            return isActive;// pobranie wartości pola isActive
-        }
-        set
-        {
-            isActive = value;//ustawienie wartości pola isActive
-        }
-    }
+    // public bool IsActive
+    // {
+    //     get
+    //     {
+    //         return isActive;// pobranie wartości pola isActive
+    //     }
+    //     set
+    //     {
+    //         isActive = value;//ustawienie wartości pola isActive
+    //     }
+    // }
+    //uzycie auto-implemented property
+    public bool IsActive { get; set; }
 
     //property do pobierania i ustawiania wartości pola name
     public string Name
     {
         get
         {
-            return name; //pobranie wartości pola name
+            return name.ToUpper(); //pobranie wartości pola name
         }
         set
         {
-            name = value; //ustawienie wartości pola name
+            name = String.IsNullOrEmpty(value) ? "Default" : value; //ustawienie wartości pola name
         }
     }
 }

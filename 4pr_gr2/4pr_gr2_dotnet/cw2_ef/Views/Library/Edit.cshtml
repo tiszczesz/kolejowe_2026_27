@@ -1,0 +1,18 @@
+﻿@model Movie
+<h3>Edytuj film</h3>
+<form asp-action="Edit" method="post">
+    <div class="mb-3">
+        <input type="hidden" asp-for="Id" />
+        <label for="Title" class="form-label">Tytuł</label>
+        <input type="text" class="form-control" id="Title" asp-for="Title" required />
+    </div>
+    <div class="mb-3">
+        <label for="Director" class="form-label">Reżyser</label>
+        <input type="text" class="form-control" id="Director" asp-for="Director" required />
+    </div>
+    <div class="mb-3">
+        <label for="ReleaseDate" class="form-label">Data wydania</label>
+        <input type="date" class="form-control" id="ReleaseDate" asp-for="ReleaseDate" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+</form>
