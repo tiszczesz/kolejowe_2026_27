@@ -1,0 +1,2 @@
+export const colors = ["red", "green", "blue", "yellow", "purple", "orange", "pink", "brown", "gray", "black", "white"];
+//# sourceMappingURL=data.js.map
