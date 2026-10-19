@@ -26,8 +26,35 @@ public class Menu
         {
             ShowMenu();
             choice = Console.ReadLine()[0];
-        } while (choice != '4');
+            switch (choice)
+            {
+                case '1':
+                    {
+                        //todo
+                        break;
+                    }
+                case '2':
+                    {
+                        //todo
+                        break;
+                    }
+                case '3':
+                    {
+                        //todo
+                        break;
+                    }
+                case '4':
+                    {
+                        //todo
+                        break; ;
+                    }
+
+
+            }
+        }
+        while (choice != '4');
         Console.WriteLine(" \t\t\t---- KONIEC -------");
     }
-
 }
+
+
