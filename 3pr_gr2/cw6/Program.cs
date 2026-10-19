@@ -14,9 +14,9 @@ if (persons != null)
     var newPerson = new Person()
     {
         Id = repo.GetLastId()+1,
-        Firstname = "Franek",
+        Firstname = "Franek123",
         Lastname = "Dzbanek",
-        Age = 34
+        Age = 134
     };
     repo.Persons?.Add(newPerson);
     repo.SavePersons();
