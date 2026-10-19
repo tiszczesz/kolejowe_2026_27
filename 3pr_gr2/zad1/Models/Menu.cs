@@ -27,7 +27,7 @@ public class Menu
             ShowMenu();
             choice = Console.ReadLine()[0];
         } while (choice != '4');
-        Console.WriteLine(" ---- KONIEC -------");
+        Console.WriteLine(" \t\t\t---- KONIEC -------");
     }
 
 }
