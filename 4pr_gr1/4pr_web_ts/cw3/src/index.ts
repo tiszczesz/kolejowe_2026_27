@@ -1,8 +1,12 @@
-import {colors} from './data.js';
-import { createSelect,createDiv } from './elemnts.js';
+import { colors } from './data.js';
+import { createSelect, createDiv } from './elemnts.js';
 
 createSelect(colors, "root");
 createDiv("root");
 document.querySelector<HTMLSelectElement>("#colorSelect")?.addEventListener("change", (event) => {
     //todo: change the color of the div based on the selected option
+    const colorDiv = document.querySelector<HTMLDivElement>("#colorDiv");
+    if (colorDiv !== null) {
+        colorDiv.style.backgroundColor = (event.target as HTMLSelectElement).value
+    }
 });
