@@ -1,0 +1,72 @@
+[
+	{
+		"id": 1,
+		"title": "Lalka",
+		"author": "Bolesław Prus",
+		"price": 34.99,
+		"year": 1890
+	},
+	{
+		"id": 2,
+		"title": "Pan Tadeusz",
+		"author": "Adam Mickiewicz",
+		"price": 29.99,
+		"year": 1834
+	},
+	{
+		"id": 3,
+		"title": "Quo vadis",
+		"author": "Henryk Sienkiewicz",
+		"price": 39.99,
+		"year": 1896
+	},
+	{
+		"id": 4,
+		"title": "Ferdydurke",
+		"author": "Witold Gombrowicz",
+		"price": 32.5,
+		"year": 1937
+	},
+	{
+		"id": 5,
+		"title": "Solaris",
+		"author": "Stanisław Lem",
+		"price": 36.99,
+		"year": 1961
+	},
+	{
+		"id": 6,
+		"title": "Wiedźmin: Ostatnie życzenie",
+		"author": "Andrzej Sapkowski",
+		"price": 42.99,
+		"year": 1993
+	},
+	{
+		"id": 7,
+		"title": "Zbrodnia i kara",
+		"author": "Fiodor Dostojewski",
+		"price": 31.99,
+		"year": 1866
+	},
+	{
+		"id": 8,
+		"title": "Mały Książę",
+		"author": "Antoine de Saint-Exupéry",
+		"price": 24.99,
+		"year": 1943
+	},
+	{
+		"id": 9,
+		"title": "Hobbit, czyli tam i z powrotem",
+		"author": "J.R.R. Tolkien",
+		"price": 37.99,
+		"year": 1937
+	},
+	{
+		"id": 10,
+		"title": "Rok 1984",
+		"author": "George Orwell",
+		"price": 27.99,
+		"year": 1949
+	}
+]
