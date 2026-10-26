@@ -1,0 +1,7 @@
+1|Adam|Nowak|23
+2|Ewa|Kowalska|30
+3|Jan|Wiśniewski|45
+4|Anna|Zielińska|28
+6|Franek|Dzbanek|34
+8|Franek123|Dzbanek|134
+9|Franek123|Dzbanek|134
