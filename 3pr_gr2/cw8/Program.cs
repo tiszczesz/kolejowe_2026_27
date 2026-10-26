@@ -20,5 +20,9 @@ app.MapGet("persons", () =>
     FileRepo repo = new FileRepo();
     return repo.Persons;
 });
+app.MapGet("/html", () =>
+{
+    return "<h2>Hello HTML</h2>";
+});
 
 app.Run();
