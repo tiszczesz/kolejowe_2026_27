@@ -1,0 +1,20 @@
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+
+//definicja endpointów
+app.MapGet("/", () => "Hello World!");
+app.MapGet("/info", () =>
+{
+    string info = "ala ma kota";
+    return info;
+});
+app.MapGet("/date",()=>DateTime.Now.ToShortDateString());
+//GET /time => aktualny czas serwerowy
+app.MapGet("/time",()=>DateTime.Now.ToLongTimeString());
+app.MapGet("/number", () =>
+{
+    Random rnd = new Random();
+    return rnd.Next(0,101);
+});
+app.Run();
