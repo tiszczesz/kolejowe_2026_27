@@ -6,6 +6,7 @@ var app = builder.Build();
 
 //definicja endpointów
 app.MapGet("/", () => "Hello World!");
+app.MapGet("/html", () => "<h1>Hello World!</h1>");
 app.MapGet("/info", () =>
 {
     string info = "ala ma kota";
