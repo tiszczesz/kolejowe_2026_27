@@ -1,0 +1,11 @@
+1|The Shawshank Redemption|Frank Darabont|1994
+2|The Godfather|Francis Ford Coppola|1972
+3|The Dark Knight|Christopher Nolan|2008
+4|Pulp Fiction|Quentin Tarantino|1994
+5|Forrest Gump|Robert Zemeckis|1994
+6|Inception|Christopher Nolan|2010
+7|The Matrix|Lana Wachowski, Lilly Wachowski|1999
+8|Spirited Away|Hayao Miyazaki|2001
+9|Parasite|Bong Joon-ho|2019
+10|Schindler's List|Steven Spielberg|1993
+10|Ala's List|Alice Spielberg|2093

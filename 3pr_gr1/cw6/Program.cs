@@ -1,3 +1,5 @@
+using cw6.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
@@ -9,12 +11,17 @@ app.MapGet("/info", () =>
     string info = "ala ma kota";
     return info;
 });
-app.MapGet("/date",()=>DateTime.Now.ToShortDateString());
+app.MapGet("/date", () => DateTime.Now.ToShortDateString());
 //GET /time => aktualny czas serwerowy
-app.MapGet("/time",()=>DateTime.Now.ToLongTimeString());
+app.MapGet("/time", () => DateTime.Now.ToLongTimeString());
 app.MapGet("/number", () =>
 {
     Random rnd = new Random();
-    return rnd.Next(0,101);
+    return rnd.Next(0, 101);
+});
+app.MapGet("/movies", () =>
+{
+    FileRepoMovies repo = new FileRepoMovies();
+    return repo.Movies;
 });
 app.Run();
