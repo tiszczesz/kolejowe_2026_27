@@ -4,10 +4,11 @@ Napisz program w języku TypeScript, który za pomocą modułu `readline` wczyta
 
 ```ts
 type City {
-    name:string;
-    count:number;
-    province:string
+    name: string;
+    population: number;
+    province: string
 }
 ``
 
 Wyświetl komunikat, czy podane miasto znajduje się w pliku. Wyszukiwanie powinno ignorować wielkość liter.
+Wyświetl miasta posortowane po liczbie ludności
