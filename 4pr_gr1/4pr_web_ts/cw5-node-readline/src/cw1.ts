@@ -5,14 +5,14 @@ import { stdin as input, stdout as output } from 'node:process';
 
 //utworzenie interfejsu do  dialogu z użytkownikiem
 // const rl = readline.createInterface({ input, output });
-const rl :readline.Interface = readline.createInterface({
+const rl: readline.Interface = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 })
 
-const firstname = await  rl.question("Podaj imię: ");
-const lastname = await  rl.question("Podaj nazwisko: ");
-let age:number = parseInt( await  rl.question("Podaj wiek: "));
-age  = isNaN(age) ? 20 : age;
-await rl.close();
-console.log(firstname,lastname,age);
+const firstname = await rl.question("Podaj imię: ");
+const lastname = await rl.question("Podaj nazwisko: ");
+let age: number = parseInt(await rl.question("Podaj wiek: "));
+age = isNaN(age) ? 20 : age;
+rl.close();
+console.log(firstname, lastname, age);
