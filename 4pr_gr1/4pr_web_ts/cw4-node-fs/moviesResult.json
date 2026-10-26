@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Ostatni peron",
+    "year": 2021,
+    "genre": "dramat",
+    "director": "Anna Nowak"
+  },
+  {
+    "id": 2,
+    "title": "Miasto pod gwiazdami",
+    "year": 2019,
+    "genre": "science fiction",
+    "director": "Marek Zieliński"
+  },
+  {
+    "id": 3,
+    "title": "Tajemnica starego kina",
+    "year": 2023,
+    "genre": "kryminał",
+    "director": "Julia Kowalska"
+  },
+  {
+    "id": 4,
+    "title": "Wakacje na opak",
+    "year": 2020,
+    "genre": "komedia",
+    "director": "Piotr Wiśniewski"
+  },
+  {
+    "id": 5,
+    "title": "Echo lasu",
+    "year": 2022,
+    "genre": "thriller",
+    "director": "Katarzyna Wójcik"
+  },
+  {
+    "id": 6,
+    "title": "Podróż do jutra",
+    "year": 2018,
+    "genre": "przygodowy",
+    "director": "Tomasz Lewandowski"
+  },
+  {
+    "id": 7,
+    "title": "Listy z północy",
+    "year": 2024,
+    "genre": "romans",
+    "director": "Ewa Kamińska"
+  },
+  {
+    "id": 8,
+    "title": "Mały wielki plan",
+    "year": 2017,
+    "genre": "familijny",
+    "director": "Adam Dąbrowski"
+  },
+  {
+    "id": 4,
+    "title": "The Dark Knight",
+    "director": "Christopher Nolan",
+    "year": 2008,
+    "genre": "Action"
+  }
+]

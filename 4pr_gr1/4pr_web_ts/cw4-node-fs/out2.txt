@@ -1,0 +1,5 @@
+ala ma kota
+kot ma ale
+ale ma alę
+lorem ipsum ala
+ala to jest asynchroniczny zapis do pliku
