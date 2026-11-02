@@ -1,0 +1,36 @@
+﻿@page
+@model cw9_razor.Pages.IndexModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Strona startowa Index</h1>
+    @{
+        int a = 12;
+        int b = 45;
+        int wynik = a + b;
+        <p>@wynik</p>
+        <p>@a + @b</p>
+    }
+    <ul>
+    
+        @foreach (string color in Model.MyColors)
+        {
+            <li>@color</li>
+        }
+    </ul>
+    <div>Aktualna data: @DateTime.Now.ToShortDateString()</div>
+    <section>
+        <a asp-page="First">Do strony pierwszej</a><br />
+        <a href="/First">Do strony pierwszej</a>
+    </section>
+</body>
+
+</html>
