@@ -17,7 +17,9 @@ Napisz program w TypeScript, który korzysta z modułów `readline` i `fs`.
     c. średnią
 
 5. Zapisz liczby z tablicy do pliku `result.txt`, umieszczając każdą    liczbę w osobnym wierszu. 
+
 Potem ------------------------
+
 dodaj statystyki tablicy na końcu pliku
 
 6. Po udanym zapisie wyświetl komunikat potwierdzający. Zamknij interfejs `readline` po zakończeniu programu.
