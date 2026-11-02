@@ -1,5 +1,6 @@
 ﻿@page
 @model cw7_razor.Pages.IndexModel
+
 @{
 }
 <!DOCTYPE html>
@@ -7,6 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -36,6 +38,12 @@
                     <option value="@c">@c</option>
                 }
             </select>
+  </section>
+  <section>
+    <p>
+        <a asp-page="Second">Druga strona</a><br />
+        <a href="/Second">Druga strona</a><br />
+    </p>
   </section>
 </body>
 </html>
