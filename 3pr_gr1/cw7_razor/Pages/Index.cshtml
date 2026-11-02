@@ -1,0 +1,41 @@
+﻿@page
+@model cw7_razor.Pages.IndexModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Strona Index</h1>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eveniet reiciendis ipsum consectetur omnis quasi a aliquid autem sequi dolores, maxime odit similique. Doloremque expedita rem quidem minus debitis. Pariatur.</p>
+    </section>
+    <section>Aktualna data: @DateTime.Now.ToShortDateString()</section>
+    <section>Aktualna czas: @DateTime.Now.ToShortTimeString()</section>
+  @{
+    int a = 20;
+    //string[] words = ["asdsadas","sadasd","asdsadasdasd"];
+    string[] words = new string[] {"asdsadas","sadasd","asdsadasdasd"};
+  }
+  <section>
+    <ul>
+                @foreach(var elem in words)
+                {
+                    <li>@elem</li>
+                }
+    </ul>
+  </section>
+  <section>
+    <select id="colors">
+                @foreach(string c in Model.Colors)
+                {
+                    <option value="@c">@c</option>
+                }
+            </select>
+  </section>
+</body>
+</html>
