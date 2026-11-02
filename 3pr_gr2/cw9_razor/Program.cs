@@ -3,6 +3,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 var app = builder.Build();
 
+//obsługa statycznych plików (wwwroot)
+app.UseStaticFiles();
+
 //app.MapGet("/", () => "Hello World!");
 
 //dodanie endpointów dla Razor Pages

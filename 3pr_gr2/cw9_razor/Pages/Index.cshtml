@@ -26,10 +26,16 @@
             <li>@color</li>
         }
     </ul>
+    <section>
+        <img src="~/images/kotek.jpg" alt="kotek">
+    </section>
     <div>Aktualna data: @DateTime.Now.ToShortDateString()</div>
     <section>
         <a asp-page="First">Do strony pierwszej</a><br />
-        <a href="/First">Do strony pierwszej</a>
+        <a href="/First">Do strony pierwszej</a> <br />
+
+        <a href="~/static.html">strona statyczna z wwwroot</a><br />
+        <a href="/static.html">strona statyczna z wwwroot</a>
     </section>
 </body>
 
