@@ -2,3 +2,10 @@
 @model zad2.Pages.CarModel
 @{
 }
+<h3>Strona samochodami</h3>
+@foreach(string car in (ViewData["cars"] as string[])?? [])
+{
+    <p>@car</p>
+}
+<hr />
+<div>@ViewData["info"]</div>

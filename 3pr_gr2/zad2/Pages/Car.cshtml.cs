@@ -7,6 +7,8 @@ namespace zad2.Pages
     {
         public void OnGet()
         {
+            ViewData["cars"] = new string[] { "ala", "bela", "cela" };
+            ViewData["info"] = "ala ma kota";
         }
     }
 }
