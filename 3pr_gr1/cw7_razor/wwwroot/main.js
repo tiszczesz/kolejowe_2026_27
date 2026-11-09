@@ -1,4 +1,5 @@
 document.querySelector("select")
-        .addEventListener("change",()=>{
-            //todo
-        })
+        .addEventListener("change",(event)=>{
+            document.body.style.backgroundColor = event.target.value;
+        }
+    )
