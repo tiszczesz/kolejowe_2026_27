@@ -1,5 +1,5 @@
 export const Container = ()=>{
     const container = document.createElement("div");
-    container.className = "container";
+    container.classList.add("container");
     return container;
 }
