@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a asp-page="Index">Index</a>
+            <a asp-page="Home">Home</a>
+            <a asp-page="Flower">Flower</a>
+        </nav>
+    </header>
+    <main>
+        @* Ładowanie podstron *@
+        @RenderBody()
+    </main>
+    <footer>
+      &copy; 2026 utworzył: XXXXXXXXXXXX
+    </footer>
+</body>
+</html>
