@@ -5,6 +5,7 @@ namespace zad2.Pages
 {
     public class CarModel : PageModel
     {
+        public string Imie = "fdfdfdf";
         public void OnGet()
         {
             ViewData["cars"] = new string[] { "ala", "bela", "cela" };
