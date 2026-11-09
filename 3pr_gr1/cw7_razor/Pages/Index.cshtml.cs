@@ -8,6 +8,7 @@ namespace cw7_razor.Pages
         public List<string> Colors { get; set; }
         public void OnGet()
         {
+            ViewData["info"] = "To jest z ViewData";
             Colors = new List<string>
             {
                 "white","green","blue","red","yellow"
