@@ -16,3 +16,7 @@ export function getAllBooks(db: Database.Database): Book[] {
   const stmt = db.prepare("SELECT * FROM books");
   return stmt.all() as Book[];
 }
+export function getBookById(db: Database.Database, id: number): Book | undefined {
+  const stmt = db.prepare("SELECT * FROM books WHERE id = ?");
+  return stmt.get(id) as Book | undefined;
+}
