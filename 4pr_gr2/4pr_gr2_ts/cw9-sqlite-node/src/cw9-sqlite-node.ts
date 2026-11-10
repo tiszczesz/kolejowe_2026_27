@@ -21,5 +21,4 @@ if (isNaN(id)) {
     console.log('Książka nie znaleziona');
     }
 }
-
 rl.close();
