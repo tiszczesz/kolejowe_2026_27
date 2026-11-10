@@ -11,3 +11,8 @@ export function openDb(): Database.Database {
     const db = new Database("app.db", { verbose: console.log });
     return db;
 }
+export function getCourses(db: Database.Database): Course[] {
+    const stmt = db.prepare("SELECT * FROM courses");
+    const courses = stmt.all() as Course[];
+    return courses;
+}
