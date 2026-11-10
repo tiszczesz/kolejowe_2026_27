@@ -16,3 +16,8 @@ export function getCourses(db: Database.Database): Course[] {
     const courses = stmt.all() as Course[];
     return courses;
 }
+export function getCourseById(db: Database.Database, id: number): Course | undefined {
+    const stmt = db.prepare("SELECT * FROM courses WHERE id = ?");
+    const course = stmt.get(id) as Course | undefined;
+    return course;
+}
