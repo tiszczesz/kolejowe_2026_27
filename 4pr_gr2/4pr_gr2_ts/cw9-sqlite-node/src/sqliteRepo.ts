@@ -20,3 +20,7 @@ export function getBookById(db: Database.Database, id: number): Book | undefined
   const stmt = db.prepare("SELECT * FROM books WHERE id = ?");
   return stmt.get(id) as Book | undefined;
 }
+export function insertBook(db:Database.Database,book:Book): void {
+  const stmt = db.prepare("INSERT INTO books (title, author, published_year, genre, price) VALUES (?, ?, ?, ?, ?)");
+  stmt.run(book.title, book.author, book.published_year, book.genre, book.price);
+}

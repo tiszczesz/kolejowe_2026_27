@@ -22,3 +22,17 @@ if (isNaN(id)) {
     }
 }
 rl.close();
+
+
+const answer = await rl.question("Czy dodać ksiżąkę(t/n): ");
+if(answer.toLowerCase() === 't') {
+  const book:Book = {
+     id: 0,
+     title: "test",
+     author: "test",
+      published_year: 2004, 
+      genre: "test",
+      price: 23.89
+  }
+}
+rl.close();
