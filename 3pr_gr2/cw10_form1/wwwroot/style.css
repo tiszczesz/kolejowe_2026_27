@@ -20,3 +20,22 @@ nav a{
 nav a:hover{
     text-decoration: underline;
 }
+.row{
+    margin-top: 20px;
+}
+.row label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+.row input[type=text]{
+    border: none;
+    border-bottom: 1px gray solid;
+    width: 120px;
+}
+.row input[type=submit]{
+    margin-left: 120px;
+    width: 112px;
+    padding: 5px;
+}
