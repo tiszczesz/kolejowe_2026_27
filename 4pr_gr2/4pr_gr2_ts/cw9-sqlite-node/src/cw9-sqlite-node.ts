@@ -1,4 +1,4 @@
-import {type Book, openDb, getAllBooks, getBookById} from './sqliteRepo.js';
+import {type Book, openDb, getAllBooks, getBookById, insertBook, deleteBook} from './sqliteRepo.js';
 import * as readline from 'node:readline/promises';
 const db = openDb();
 const books = getAllBooks(db);
@@ -21,18 +21,22 @@ if (isNaN(id)) {
     console.log('Książka nie znaleziona');
     }
 }
-rl.close();
+// rl.close();
 
 
 const answer = await rl.question("Czy dodać ksiżąkę(t/n): ");
 if(answer.toLowerCase() === 't') {
   const book:Book = {
      id: 0,
-     title: "test",
+     title: "test16-11-2026",
      author: "test",
       published_year: 2004, 
       genre: "test",
       price: 23.89
   }
+  insertBook(db,book);
 }
+const bookIdToDelete = 
+      parseInt(await rl.question("Podaj id ksiżki do usunięcia: "));
+deleteBook(db,bookIdToDelete)
 rl.close();

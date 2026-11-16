@@ -24,3 +24,18 @@ export function insertBook(db:Database.Database,book:Book): void {
   const stmt = db.prepare("INSERT INTO books (title, author, published_year, genre, price) VALUES (?, ?, ?, ?, ?)");
   stmt.run(book.title, book.author, book.published_year, book.genre, book.price);
 }
+export function deleteBook(db:Database.Database,id:number){
+  const result = db.prepare("DELETE FROM Books WHERE id=?")
+  result.run(id)
+}
+export function updateBook(db:Database.Database,book:Book){
+  const result = db.prepare(`
+      UPDATE Books SET title=?, author=?, published_year=?, genre=?, price=?
+           WHERE id=?
+    `).run(book.title,
+            book.author,
+            book.published_year,
+            book.genre,
+            book.price,
+            book.id);
+}
