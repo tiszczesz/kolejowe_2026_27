@@ -1,0 +1,25 @@
+﻿@page
+@model cw8_form1.Pages.IndexModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/style.css">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Formularz bez modelu</h1>
+    <form  method="post">
+        <div class="row">
+            <label for="N">N = </label>
+            <input type="number" name="N" id="N" min="1" max="30">
+        </div>
+        <button type="submit">Oblicz silnię</button>
+    </form>
+    <div class="result"></div>
+    <script src="~/script.js" defer></script>
+</body>
+</html>
