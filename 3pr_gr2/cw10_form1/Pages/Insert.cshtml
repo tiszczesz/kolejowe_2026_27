@@ -3,7 +3,7 @@
 @{
 }
 <h2>Strona z formularzem</h2>
-<form method="get">
+<form method="post">
     <div class="row">
         <label for="Firstname">Imię</label>
         <input type="text" name="Firstname" id="Firstname" placeholder="podaj imię"/>
@@ -17,8 +17,11 @@
     <div class="row">
         <label for="Division">Wybierz klasę</label>
         <select name="Division" id="Division">
-
-        </select>
+            @foreach(string d in Model.Divisions)
+                {
+                    <option value="@d">@d</option>
+                }
+            </select>
         
     </div>
     <div class="row">
