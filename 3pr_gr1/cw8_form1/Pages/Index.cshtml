@@ -12,14 +12,22 @@
 </head>
 <body>
     <h1>Formularz bez modelu</h1>
+    <section>
+        <a asp-page="Nwd">Obliczanie NWD</a>
+    </section>
     <form  method="post">
         <div class="row">
             <label for="N">N = </label>
-            <input type="number" name="N" id="N" min="1" max="30">
+            <input type="number" name="N" id="N" min="1" max="25">
         </div>
         <button type="submit">Oblicz silnię</button>
     </form>
-    <div class="result"></div>
+    <div class="result">
+        @if (ViewData["result"] != null)
+            {
+                <div>Silnia wynosi: @ViewData["result"]</div>
+            }
+        </div>
     <script src="~/script.js" defer></script>
 </body>
 </html>
