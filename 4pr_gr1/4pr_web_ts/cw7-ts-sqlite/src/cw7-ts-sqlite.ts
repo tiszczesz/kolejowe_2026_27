@@ -1,4 +1,4 @@
-import {type Course,openDb,getCourses, getCourseById} from './repoSqlite.js';
+import {type Course,openDb,getCourses, getCourseById, insertBook} from './repoSqlite.js';
 import * as readline from 'node:readline/promises';
 
 const rl = readline.createInterface({
@@ -24,5 +24,20 @@ if (course) {
     console.log(course);
 } else {
     console.log("Course not found.");
+}
+const choice = await rl.question("Czy dodać nowy kurs? (t/n): ")
+if(choice==='t'){
+    const courseTitle = await rl.question("nazwa kursu: ");
+    const coursePrice = parseFloat(await rl.question("cena kursu: "));
+    const courseDate = await rl.question("data kursu: ");
+    const newCourse:Course = {
+        id: 0,
+        title: courseTitle,
+        price: coursePrice,
+        date_start: courseDate
+    }
+    insertBook(db,newCourse);
+    console.log("Dodano nowy kurs!");
+    
 }
 rl.close();

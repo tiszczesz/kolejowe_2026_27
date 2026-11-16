@@ -21,3 +21,7 @@ export function getCourseById(db: Database.Database, id: number): Course | undef
     const course = stmt.get(id) as Course | undefined;
     return course;
 }
+export function insertBook(db: Database.Database, newCourse:Course){
+    const stmt = db.prepare("INSERT INTO courses (title, price, date_start) VALUES (?, ?, ?)");
+    const result = stmt.run(newCourse.title, newCourse.price, newCourse.date_start);
+}
