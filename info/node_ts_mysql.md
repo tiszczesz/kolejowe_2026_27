@@ -193,7 +193,7 @@ async function updateItem(): Promise<void> {
 
 async function deleteItem(): Promise<void> {
   const id = await askId();
-  const confirmation = (await rl.question(`Usunąć produkt ${id}? (t/N): "))
+  const confirmation = (await rl.question(`Usunąć produkt ${id}? (t/N): `))
     .trim()
     .toLowerCase();
   if (confirmation !== "t") {
