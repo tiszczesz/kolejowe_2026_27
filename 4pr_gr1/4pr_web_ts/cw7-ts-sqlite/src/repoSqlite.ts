@@ -25,3 +25,11 @@ export function insertBook(db: Database.Database, newCourse:Course){
     const stmt = db.prepare("INSERT INTO courses (title, price, date_start) VALUES (?, ?, ?)");
     const result = stmt.run(newCourse.title, newCourse.price, newCourse.date_start);
 }
+export function updateCourse(db: Database.Database, updatedCourse: Course): void {
+    const stmt = db.prepare("UPDATE courses SET title = ?, price = ?, date_start = ? WHERE id = ?");
+    stmt.run(updatedCourse.title, updatedCourse.price, updatedCourse.date_start, updatedCourse.id);
+}
+export function deleteCourse(db: Database.Database, id: number): void {
+    const stmt = db.prepare("DELETE FROM courses WHERE id = ?");
+    stmt.run(id);
+}
