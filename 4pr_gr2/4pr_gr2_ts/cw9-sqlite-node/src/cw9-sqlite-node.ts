@@ -41,9 +41,12 @@ if(answer.toLowerCase() === 't') {
 }
 
 //usuwanie książki
-const bookIdToDelete = 
+const deleteQuery = await rl.question("Czy usunąć książkę(t/n): ");
+if(deleteQuery.toLowerCase() === 't') {
+      const bookIdToDelete = 
       parseInt(await rl.question("Podaj id ksiżki do usunięcia: "));
-deleteBook(db,bookIdToDelete)
+      deleteBook(db,bookIdToDelete)
+}
 
 //update książki
 const updateQuery = await rl.question("Czy zaktualizować książkę(t/n): ");
