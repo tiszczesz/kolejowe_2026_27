@@ -6,25 +6,34 @@
 <form method="post">
     <div class="row">
         <label for="Firstname">Imię</label>
-        <input type="text" name="Firstname" id="Firstname" placeholder="podaj imię"/>
+        <input type="text" name="Firstname" id="Firstname" placeholder="podaj imię" />
         <span></span>
     </div>
     <div class="row">
         <label for="Lastname">Nazwisko</label>
-        <input type="text" name="Lastname" id="Lastname" placeholder="podaj nazwisko"/>
+        <input type="text" name="Lastname" id="Lastname" placeholder="podaj nazwisko" />
         <span></span>
     </div>
     <div class="row">
         <label for="Division">Wybierz klasę</label>
         <select name="Division" id="Division">
-            @foreach(string d in Model.Divisions)
-                {
-                    <option value="@d">@d</option>
-                }
-            </select>
+            @foreach (string d in Model.Divisions)
+            {
+                <option value="@d">@d</option>
+            }
+        </select>
         
     </div>
     <div class="row">
         <input type="submit" value="Zapisz">
     </div>
 </form>
+<hr>
+@if (ViewData["firstname"] != null)
+{
+    <div>
+        imię : @ViewData["firstname"] <br />
+        nazwisko : @ViewData["lastname"] <br />
+        klasa : @ViewData["division"] <br />
+    </div>
+}

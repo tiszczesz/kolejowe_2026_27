@@ -18,11 +18,10 @@ namespace cw10_form1.Pages
             
         }
         public void OnPost()
-        {
-           string? firstname = Request.Form["Firstname"]; 
-           string? lastname = Request.Form["Lastname"]; 
-           string? division = Request.Form["Division"]; 
-           ViewData["result"] = new string?[]{firstname,lastname,division};
+        {           
+           ViewData["firstname"] = Request.Form["Firstname"];
+           ViewData["lastname"] = Request.Form["Lastname"];
+           ViewData["division"] = Request.Form["Division"];
         }
     }
 }

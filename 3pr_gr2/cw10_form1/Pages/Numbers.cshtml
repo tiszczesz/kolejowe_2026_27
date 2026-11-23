@@ -1,0 +1,20 @@
+﻿@page
+@model cw10_form1.Pages.NumbersModel
+@{
+}
+<form method="post">
+    <div class="row">
+        <label for="Count">Ile:</label>
+        <input type="number" name="Count" id="Count" min="1" max="2000" />
+        <span></span>
+    </div>
+    <div class="row">
+        <label for="Divided">Podzielnik</label>
+        <input type="number" name="Divided" id="Divided" min="1" max"100" />
+        <span></span>
+    </div>
+   
+    <div class="row">
+        <input type="submit" value="Generuj">
+    </div>
+</form>

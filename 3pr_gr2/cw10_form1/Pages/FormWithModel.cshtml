@@ -1,0 +1,16 @@
+﻿@page
+@model cw10_form1.Pages.FormWithModelModel
+@{
+}
+<form asp-action="FormWithModel" method="post">
+    <label asp-for="@Model.MyTable.Rows"></label>
+    <input type="number" asp-for="@Model.MyTable.Rows" placeholder="podaj ilość wierszy">
+    <span asp-validation-for="@Model.MyTable.Rows"></span>
+    <br />
+   
+    <label asp-for="@Model.MyTable.Columns"></label>
+    <input type="number" asp-for="@Model.MyTable.Columns" placeholder="podaj ilość kolumn">
+    <span asp-validation-for="@Model.MyTable.Columns"></span>
+    <br />
+    <button type="submit">Zapisz</button>
+</form>
